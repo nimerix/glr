@@ -1,0 +1,27 @@
+{
+  "name": "gen-license-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gen-license-report": "bin/glr",
+    "glr": "bin/glr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimerix/gen-license-report.git"
+  },
+  "author": "Michael Pearce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimerix/gen-license-report/issues"
+  },
+  "homepage": "https://github.com/nimerix/gen-license-report#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "nlf": "^1.4.1"
+  }
+}
