@@ -1,10 +1,9 @@
 {
-  "name": "gen-license-report",
+  "name": "glr",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple tool to generate license information",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
     "gen-license-report": "bin/glr",
@@ -12,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nimerix/gen-license-report.git"
+    "url": "git+https://github.com/nimerix/glr.git"
   },
   "author": "Michael Pearce",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nimerix/gen-license-report/issues"
+    "url": "https://github.com/nimerix/glr/issues"
   },
-  "homepage": "https://github.com/nimerix/gen-license-report#readme",
+  "homepage": "https://github.com/nimerix/glr#readme",
   "dependencies": {
     "commander": "^2.9.0",
     "nlf": "^1.4.1"
