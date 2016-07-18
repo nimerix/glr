@@ -59,15 +59,6 @@ function addToOut(obj) {
       _o.license.text = "None included. See " + obj.repository;
     }
   }
-
-  // if (obj.licenseSources.package.sources[0].license) {
-  //   _o.license = obj.licenseSources.package.sources[0].license;
-  // }
-  // if (obj.licenseSources.license.sources[0].text)
-  // {
-  //     _o.license_text = obj.licenseSources.license.sources[0].text;
-  // }
-
   outContent.push(_o);
 
 }
