@@ -2,7 +2,7 @@ const nlf = require('nlf');
 const fs = require('fs');
 const path = require('path');
 const argv = require('yargs')
-  .usage('Usage: -i [string] -o [string] -p [string] -l [number] -d')
+  .usage('Usage: -i [string] -o [string] -p [string] -l [number] -d -r')
   .alias('i', 'in-path')
   .default('i', 'NULL_PLACEHOLDER')
   .describe('i', 'the path to a node module')
@@ -19,6 +19,9 @@ const argv = require('yargs')
   .boolean('d')
   .default('d', true)
   .describe('d', 'ignore development dependencies')
+  .alias('r', 'raw')
+  .boolean('r')
+  .default('r', false)
   .argv;
 
 var counter = 0;
@@ -76,7 +79,9 @@ nlf.find({production: production, directory: inPath}, (err, data) => {
     for(var x of data) {
       _out.push(filterData(x));
     }
-    fs.writeFile(path.normalize(`${outPath}/all.${outFile}`), JSON.stringify(data, null, 2), (err) => {});
+    if (argv.r) {
+      fs.writeFile(path.normalize(`${outPath}/all.${outFile}`), JSON.stringify(data, null, 2), (err) => {});
+    }
     fs.writeFile(path.normalize(`${outPath}/${outFile}`), JSON.stringify(_out, null, 2), (err) => {
       if (err) { console.error(err); process.exit(1) }
       else {
